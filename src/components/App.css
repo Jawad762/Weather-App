@@ -3,22 +3,16 @@ html {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
 body.rainy {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
   url(https://pluspng.com/img-png/rain-hd-png-it-was-cold-and-hard-like-a-bitter-slap-to-the-face-i-bet-it-was-taunting-me-saying-hey-i-know-you-re-having-a-rough-day-and-you-didn-t-bring-an-1920.png);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 body.thunderstorm {
@@ -27,6 +21,10 @@ body.thunderstorm {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 body.cloudy {
@@ -35,6 +33,10 @@ body.cloudy {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 body.snow {
@@ -43,6 +45,10 @@ body.snow {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 body.clear {
@@ -51,6 +57,10 @@ body.clear {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 body.haze {
