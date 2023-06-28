@@ -25,6 +25,7 @@ const WeatherPage = ({setShowSidebar, currentWeather, showSidebar}) => {
 
   return (
     <div className="weather-page" onMouseOver={() => setShowSidebar(false)}>
+      <h1 className='app-name'>Weather<span className='by'> by Jawad</span></h1>
       <div className={showSidebar ? 'info-2' : 'info-1'}>
         <div className="temp">{currentWeather.main.temp}°C</div>
         <div className="place-time">

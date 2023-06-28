@@ -3,6 +3,13 @@ html {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 body.rainy {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
   url(https://pluspng.com/img-png/rain-hd-png-it-was-cold-and-hard-like-a-bitter-slap-to-the-face-i-bet-it-was-taunting-me-saying-hey-i-know-you-re-having-a-rough-day-and-you-didn-t-bring-an-1920.png);
@@ -114,7 +121,7 @@ body.haze {
   color: white;
   max-width: 60vw;
   position: relative;
-  top:25vh;
+  top:12vh;
   left:20vw;
   transition: 0.8s;
 }
@@ -128,7 +135,7 @@ body.haze {
   color: white;
   max-width: 60vw;
   position: relative;
-  top:25vh;
+  top:12vh;
   left:2vw;
   transition: 0.8s;
 }
@@ -273,4 +280,18 @@ input::placeholder {
 .hidden-search {
   display: none;
   transition: 2s;
+}
+
+.app-name {
+  color: white;
+  font-size: 2.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: fit-content;
+  margin-left: 5%;
+}
+
+.by {
+  font-size: 1rem;
+  width: fit-content;
+  color: goldenrod;
 }
