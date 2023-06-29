@@ -10,6 +10,11 @@ body {
   height: 100vh;
 }
 
+#root {
+  position: fixed;
+  inset:0;
+}
+
 body.rainy {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
   url(https://pluspng.com/img-png/rain-hd-png-it-was-cold-and-hard-like-a-bitter-slap-to-the-face-i-bet-it-was-taunting-me-saying-hey-i-know-you-re-having-a-rough-day-and-you-didn-t-bring-an-1920.png);
