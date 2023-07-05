@@ -1,4 +1,5 @@
 import { WiStrongWind, WiCloud, WiHumidity, WiRaindrop } from "react-icons/wi";
+
 const style = {
     position: 'relative',
     top: '17%'

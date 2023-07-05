@@ -16,6 +16,7 @@ function App() {
   const [text,setText] = useState('')
   const [city, setCity] = useState('Sydney')
   const [recentSearches,setRecentSearches] = useState(['Beirut','California', 'Omaha'])
+  const [unit,setUnit] = useState('metric')
   const [currentWeather, setCurrentWeather] = useState(
     {
       "coord":{"lon":151.2073,"lat":-33.8679},
@@ -74,7 +75,7 @@ function App() {
   useEffect(() => {
     async function fetchData () {
       try {
-        const {data} = await axios(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e2e5f03b89b9aaf31a6608ce047075d8`)
+        const {data} = await axios(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=e2e5f03b89b9aaf31a6608ce047075d8`)
         console.log(data)
         if (data) setCurrentWeather(data)
       }
@@ -84,20 +85,27 @@ function App() {
       }
     }
     fetchData()
-  }, [city])
+  }, [city,unit])
 
   useEffect(() => {
     console.log(currentWeather)
   },[currentWeather])
 
-  
+  const handleUnits = (event) => {
+    if (unit === 'metric') setUnit('imperial')
+    else setUnit('metric')
+  }
+
+  useEffect(() => {
+    console.log(unit)
+  }, [unit])
 
   return (
     <div>
       <div className="search visible" onMouseOver={() => setShowSidebar(true)}>
           <div className="logo"><FaSearch style={style} /></div>
       </div>
-      <WeatherPage setShowSidebar={setShowSidebar} currentWeather={currentWeather} showSidebar={showSidebar}/>
+      <WeatherPage setShowSidebar={setShowSidebar} currentWeather={currentWeather} showSidebar={showSidebar} handleUnits={handleUnits} unit={unit}/>
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} setCity={setCity} handleSearch={handleSearch} handleSubmit={handleSubmit} text={text} currentWeather={currentWeather} recentSearches={recentSearches}/>  
     </div>
   )
